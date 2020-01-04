@@ -1,0 +1,838 @@
+version	1
+
+// General informations
+root_actuated 0
+external_forces 0
+
+// Informations about Pelvis segment
+	// Segment
+	segment	Pelvis
+		RT
+			1.0000000000	0.0000000000	0.0000000000	0.0000000000
+			0.0000000000	1.0000000000	0.0000000000	0.0000000000
+			0.0000000000	0.0000000000	1.0000000000	0.0000000000
+			0.0000000000	0.0000000000	0.0000000000	1.0000000000
+		translations	xyz
+		rotations	xyz
+		mass	1.00000
+		inertia
+			1.0000000000	0.0000000000	0.0000000000
+			0.0000000000	1.0000000000	0.0000000000
+			0.0000000000	0.0000000000	1.0000000000
+		com		0.0000000000		0.0000000000		0.0000000000
+	endsegment
+
+	// Markers
+	marker	EIASD
+		parent	Pelvis
+		position	0.1281892217	0.0749765205	-0.0000000000
+		technical 1
+	endmarker
+	marker	CID
+		parent	Pelvis
+		position	0.1283565815	0.0598085539	0.0840360207
+		technical 1
+	endmarker
+	marker	EIPSD
+		parent	Pelvis
+		position	0.0463989796	-0.0870102025	-0.0020821297
+		technical 1
+	endmarker
+	marker	EIPSG
+		parent	Pelvis
+		position	-0.0463989796	-0.0818536384	0.0020821297
+		technical 1
+	endmarker
+	marker	CIG
+		parent	Pelvis
+		position	-0.1331230125	0.0624886367	0.0986735213
+		technical 1
+	endmarker
+	marker	EIASG
+		parent	Pelvis
+		position	-0.1281892217	0.0938873204	-0.0000000000
+		technical 1
+	endmarker
+
+
+// Informations about Thorax segment
+	// Segment
+	segment	Thorax
+		parent	Pelvis
+		RT
+			0.9978914990	0.0226390274	0.0608278767	-0.0018212712
+			-0.0082341184	0.9737803512	-0.2273412124	0.0138886119
+			-0.0643797751	0.2263609993	0.9719135468	0.1596893073
+			0.0000000000	0.0000000000	0.0000000000	1.0000000000
+		rotations	xyz
+		mass	1.00000
+		inertia
+			1.0000000000	0.0000000000	0.0000000000
+			0.0000000000	1.0000000000	0.0000000000
+			0.0000000000	0.0000000000	1.0000000000
+		com		0.0000000000		0.0000000000		0.0000000000
+	endsegment
+
+	// Markers
+	marker	MANU
+		parent	Thorax
+		position	0.0033092731	0.0583861677	0.2185593169
+		technical 1
+	endmarker
+	marker	MIDSTERNUM
+		parent	Thorax
+		position	-0.0001487671	0.0962082313	0.1543837235
+		technical 1
+	endmarker
+	marker	XIPHOIDE
+		parent	Thorax
+		position	0.0023228674	0.1049518289	0.0063884995
+		technical 1
+	endmarker
+	marker	C7
+		parent	Thorax
+		position	-0.0033092731	-0.0583861677	0.2887522678
+		technical 1
+	endmarker
+	marker	D3
+		parent	Thorax
+		position	-0.0006155205	-0.1020477242	0.1483691062
+		technical 1
+	endmarker
+	marker	D10
+		parent	Thorax
+		position	0.0023228674	-0.1122597960	-0.0029449590
+		technical 1
+	endmarker
+
+
+// Informations about Tete segment
+	// Segment
+	segment	Tete
+		parent	Thorax
+		RT
+			0.9895092020	-0.1434354502	-0.0172571915	-0.0091056578
+			0.0725841582	0.5968680800	-0.7990494572	0.0110294186
+			0.1249122852	0.7894141920	0.6010175989	0.3211734003
+			0.0000000000	0.0000000000	0.0000000000	1.0000000000
+		rotations	xyz
+		mass	1.00000
+		inertia
+			1.0000000000	0.0000000000	0.0000000000
+			0.0000000000	1.0000000000	0.0000000000
+			0.0000000000	0.0000000000	1.0000000000
+		com		0.0000000000		0.0000000000		0.0000000000
+	endsegment
+
+	// Markers
+	marker	ZYGD
+		parent	Tete
+		position	0.0672909400	0.0911783324	-0.0464155875
+		technical 1
+	endmarker
+	marker	TEMPD
+		parent	Tete
+		position	0.0711531477	0.1144325378	-0.0245449655
+		technical 1
+	endmarker
+	marker	GLABELLE
+		parent	Tete
+		position	0.0007214454	0.1386900956	-0.0644324677
+		technical 1
+	endmarker
+	marker	TEMPG
+		parent	Tete
+		position	-0.0662643602	0.1133204608	-0.0211920343
+		technical 1
+	endmarker
+	marker	ZYGG
+		parent	Tete
+		position	-0.0625169879	0.0911783324	-0.0464155875
+		technical 1
+	endmarker
+
+
+// Informations about EpauleD segment
+	// Segment
+	segment	EpauleD
+		parent	Thorax
+		RT
+			0.9730516324	0.2081577826	0.0992010990	0.0400367266
+			-0.2106115356	0.9774574361	0.0148236881	0.0168400533
+			-0.0938791858	-0.0353171097	0.9949569840	0.2064402092
+			0.0000000000	0.0000000000	0.0000000000	1.0000000000
+		rotations	yz
+		mass	1.00000
+		inertia
+			1.0000000000	0.0000000000	0.0000000000
+			0.0000000000	1.0000000000	0.0000000000
+			0.0000000000	0.0000000000	1.0000000000
+		com		0.0000000000		0.0000000000		0.0000000000
+	endsegment
+
+	// Markers
+	marker	CLAV1D
+		parent	EpauleD
+		position	-0.0204251174	0.0347019537	0.0251325052
+		technical 1
+	endmarker
+	marker	CLAV2D
+		parent	EpauleD
+		position	0.0395918602	0.0331820039	0.0271597446
+		technical 1
+	endmarker
+	marker	CLAV3D
+		parent	EpauleD
+		position	0.0900578780	0.0148499413	0.0525999129
+		technical 1
+	endmarker
+	marker	ACRANTD
+		parent	EpauleD
+		position	0.1243493578	0.0237700044	0.0486119089
+		technical 1
+	endmarker
+	marker	ACRPOSTD
+		parent	EpauleD
+		position	0.1443451425	-0.0358938126	0.0491604305
+		technical 1
+	endmarker
+	marker	SCAPD
+		parent	EpauleD
+		position	0.0645887672	-0.0966185426	0.0486119089
+		technical 1
+	endmarker
+
+
+// Informations about BrasD segment
+	// Segment
+	segment	BrasD
+		parent	EpauleD
+		RT
+			0.8521110394	0.3371725382	-0.4002767240	0.1336035708
+			-0.3958738542	0.9155126614	-0.0715573800	-0.0000016592
+			0.3423312254	0.2194339229	0.9135962376	0.0000052680
+			0.0000000000	0.0000000000	0.0000000000	1.0000000000
+		rotations	xyz
+		mass	1.00000
+		inertia
+			1.0000000000	0.0000000000	0.0000000000
+			0.0000000000	1.0000000000	0.0000000000
+			0.0000000000	0.0000000000	1.0000000000
+		com		0.0000000000		0.0000000000		0.0000000000
+	endsegment
+
+	// Markers
+	marker	DELTD
+		parent	BrasD
+		position	0.0294683691	0.0232712785	-0.1160801414
+		technical 1
+	endmarker
+	marker	BICEPSD
+		parent	BrasD
+		position	-0.0031585598	0.0509295887	-0.1872410486
+		technical 1
+	endmarker
+	marker	TRICEPSD
+		parent	BrasD
+		position	0.0466575913	-0.0251498276	-0.1585434582
+		technical 1
+	endmarker
+	marker	EPICOND
+		parent	BrasD
+		position	0.0408710889	-0.0115870383	-0.2417610291
+		technical 1
+	endmarker
+	marker	EPITROD
+		parent	BrasD
+		position	-0.0393522180	-0.0115870383	-0.2413461931
+		technical 1
+	endmarker
+
+
+// Informations about ABrasD segment
+	// Segment
+	segment	ABrasD
+		parent	BrasD
+		RT
+			0.7281806944	-0.5978724766	-0.3351139773	0.0000177437
+			0.5346841455	0.8014322135	-0.2679911787	0.0000127460
+			0.4287956862	0.0159658719	0.9032604000	-0.2572510774
+			0.0000000000	0.0000000000	0.0000000000	1.0000000000
+		rotations	xz
+		mass	1.00000
+		inertia
+			1.0000000000	0.0000000000	0.0000000000
+			0.0000000000	1.0000000000	0.0000000000
+			0.0000000000	0.0000000000	1.0000000000
+		com		0.0000000000		0.0000000000		0.0000000000
+	endsegment
+
+	// Markers
+	marker	OLE1D
+		parent	ABrasD
+		position	-0.0233422978	-0.0211055800	0.0050432603
+		technical 1
+	endmarker
+	marker	OLE2D
+		parent	ABrasD
+		position	-0.0207958031	-0.0262882075	-0.0418521826
+		technical 1
+	endmarker
+	marker	BRACHD
+		parent	ABrasD
+		position	0.0262970393	-0.0384124900	-0.0524310731
+		technical 1
+	endmarker
+	marker	BRACHANTD
+		parent	ABrasD
+		position	0.0320069480	0.0405839563	-0.0697367917
+		technical 1
+	endmarker
+	marker	ABRAPOSTD
+		parent	ABrasD
+		position	0.0141429993	-0.0295895718	-0.1765179885
+		technical 1
+	endmarker
+	marker	ABRASANTD
+		parent	ABrasD
+		position	0.0068642577	0.0364858203	-0.1713768662
+		technical 1
+	endmarker
+	marker	ULNAD
+		parent	ABrasD
+		position	-0.0201238545	-0.0209682933	-0.2061854256
+		technical 1
+	endmarker
+	marker	RADIUSD
+		parent	ABrasD
+		position	0.0283177194	-0.0209682933	-0.2100530340
+		technical 1
+	endmarker
+
+
+// Informations about MainD segment
+	// Segment
+	segment	MainD
+		parent	ABrasD
+		RT
+			0.9694477911	-0.0866341024	0.2294896774	0.0000002970
+			-0.0214243677	0.9020760930	0.4310449155	0.0000045305
+			-0.2443603411	-0.4227922128	0.8726595948	-0.2208340024
+			0.0000000000	0.0000000000	0.0000000000	1.0000000000
+		rotations	xy
+		mass	1.00000
+		inertia
+			1.0000000000	0.0000000000	0.0000000000
+			0.0000000000	1.0000000000	0.0000000000
+			0.0000000000	0.0000000000	1.0000000000
+		com		0.0000000000		0.0000000000		0.0000000000
+	endsegment
+
+	// Markers
+	marker	METAC5D
+		parent	MainD
+		position	-0.0099786710	-0.0000000000	-0.0601953186
+		technical 1
+	endmarker
+	marker	METAC2D
+		parent	MainD
+		position	0.0546575097	0.0000000000	-0.0601953186
+		technical 1
+	endmarker
+	marker	MIDMETAC3D
+		parent	MainD
+		position	0.0193500401	-0.0113719058	-0.0477897823
+		technical 1
+	endmarker
+
+
+// Informations about EpauleG segment
+	// Segment
+	segment	EpauleG
+		parent	Thorax
+		RT
+			0.9858316308	-0.1657351296	-0.0258430331	-0.0430360037
+			0.1617244294	0.9800239899	-0.1157505421	0.0117997144
+			0.0445107236	0.1099310959	0.9929420675	0.1973975518
+			0.0000000000	0.0000000000	0.0000000000	1.0000000000
+		rotations	yz
+		mass	1.00000
+		inertia
+			1.0000000000	0.0000000000	0.0000000000
+			0.0000000000	1.0000000000	0.0000000000
+			0.0000000000	0.0000000000	1.0000000000
+		com		0.0000000000		0.0000000000		0.0000000000
+	endsegment
+
+	// Markers
+	marker	CLAV1G
+		parent	EpauleG
+		position	0.0214366534	0.0433643166	0.0310098816
+		technical 1
+	endmarker
+	marker	CLAV2G
+		parent	EpauleG
+		position	-0.0470410398	0.0370749835	0.0290441687
+		technical 1
+	endmarker
+	marker	CLAV3G
+		parent	EpauleG
+		position	-0.0909742198	0.0194200019	0.0492879390
+		technical 1
+	endmarker
+	marker	ACRANTG
+		parent	EpauleG
+		position	-0.1223973823	0.0255765273	0.0446424337
+		technical 1
+	endmarker
+	marker	ACRPOSTG
+		parent	EpauleG
+		position	-0.1463756201	-0.0371625636	0.0424684629
+		technical 1
+	endmarker
+	marker	SCAPG
+		parent	EpauleG
+		position	-0.0588404448	-0.0963499824	0.0446424337
+		technical 1
+	endmarker
+
+
+// Informations about BrasG segment
+	// Segment
+	segment	BrasG
+		parent	EpauleG
+		RT
+			0.8990660011	-0.3633720363	0.2442152512	-0.1377749097
+			0.3567708014	0.9313831958	0.0723874149	-0.0000065312
+			-0.2537615434	0.0220478073	0.9670154978	-0.0000009607
+			0.0000000000	0.0000000000	0.0000000000	1.0000000000
+		rotations	xyz
+		mass	1.00000
+		inertia
+			1.0000000000	0.0000000000	0.0000000000
+			0.0000000000	1.0000000000	0.0000000000
+			0.0000000000	0.0000000000	1.0000000000
+		com		0.0000000000		0.0000000000		0.0000000000
+	endsegment
+
+	// Markers
+	marker	DELTG
+		parent	BrasG
+		position	-0.0374801686	0.0103542301	-0.1100486773
+		technical 1
+	endmarker
+	marker	BICEPSG
+		parent	BrasG
+		position	-0.0220222336	0.0455813520	-0.1749210879
+		technical 1
+	endmarker
+	marker	TRICEPSG
+		parent	BrasG
+		position	-0.0463370944	-0.0279672066	-0.1641867303
+		technical 1
+	endmarker
+	marker	EPICONG
+		parent	BrasG
+		position	-0.0324361317	-0.0166352200	-0.2423834441
+		technical 1
+	endmarker
+	marker	EPITROG
+		parent	BrasG
+		position	0.0354166626	-0.0166352200	-0.2489670325
+		technical 1
+	endmarker
+
+
+// Informations about ABrasG segment
+	// Segment
+	segment	ABrasG
+		parent	BrasG
+		RT
+			0.7242723512	0.5604879283	0.4016003531	-0.0000114269
+			-0.4727331767	0.8276452908	-0.3025336609	0.0000063257
+			-0.5019491058	0.0292669554	0.8644018396	-0.2561324864
+			0.0000000000	0.0000000000	0.0000000000	1.0000000000
+		rotations	xz
+		mass	1.00000
+		inertia
+			1.0000000000	0.0000000000	0.0000000000
+			0.0000000000	1.0000000000	0.0000000000
+			0.0000000000	0.0000000000	1.0000000000
+		com		0.0000000000		0.0000000000		0.0000000000
+	endsegment
+
+	// Markers
+	marker	OLE1G
+		parent	ABrasG
+		position	0.0249508783	-0.0189659871	0.0025586539
+		technical 1
+	endmarker
+	marker	OLE2G
+		parent	ABrasG
+		position	0.0218152196	-0.0262167646	-0.0453006319
+		technical 1
+	endmarker
+	marker	BRACHG
+		parent	ABrasG
+		position	-0.0273982356	-0.0394080794	-0.0659806015
+		technical 1
+	endmarker
+	marker	BRACHANTG
+		parent	ABrasG
+		position	-0.0291230058	0.0429020240	-0.0532180856
+		technical 1
+	endmarker
+	marker	ABRAPOSTG
+		parent	ABrasG
+		position	-0.0160561475	-0.0340425600	-0.1713610255
+		technical 1
+	endmarker
+	marker	ABRANTG
+		parent	ABrasG
+		position	0.0016600856	0.0349155973	-0.1714542778
+		technical 1
+	endmarker
+	marker	ULNAG
+		parent	ABrasG
+		position	0.0166358836	-0.0264409289	-0.2012023595
+		technical 1
+	endmarker
+	marker	RADIUSG
+		parent	ABrasG
+		position	-0.0238884713	-0.0264409289	-0.2067150586
+		technical 1
+	endmarker
+
+
+// Informations about MainG segment
+	// Segment
+	segment	MainG
+		parent	ABrasG
+		RT
+			0.8807462685	0.2418258797	-0.4071931412	-0.0000070224
+			0.0193556892	0.8407047877	0.5411476852	0.0000140342
+			0.4731927384	-0.4844953082	0.7357668982	-0.2192288097
+			0.0000000000	0.0000000000	0.0000000000	1.0000000000
+		rotations	xy
+		mass	1.00000
+		inertia
+			1.0000000000	0.0000000000	0.0000000000
+			0.0000000000	1.0000000000	0.0000000000
+			0.0000000000	0.0000000000	1.0000000000
+		com		0.0000000000		0.0000000000		0.0000000000
+	endsegment
+
+	// Markers
+	marker	METAC5G
+		parent	MainG
+		position	0.0032823015	0.0000000000	-0.0664867297
+		technical 1
+	endmarker
+	marker	METAC2G
+		parent	MainG
+		position	-0.0595883318	0.0000000000	-0.0664867297
+		technical 1
+	endmarker
+	marker	MIDMETAC3G
+		parent	MainG
+		position	-0.0268379198	-0.0126017986	-0.0489395141
+		technical 1
+	endmarker
+
+
+// Informations about CuisseD segment
+	// Segment
+	segment	CuisseD
+		parent	Pelvis
+		RT
+			0.9670452242	-0.0091501943	-0.2544401862	0.0815784902
+			0.0093089104	0.9999565028	-0.0005803287	0.0241591400
+			0.2544344289	-0.0018073568	0.9670883387	-0.1080733352
+			0.0000000000	0.0000000000	0.0000000000	1.0000000000
+		rotations	xyz
+		mass	1.00000
+		inertia
+			1.0000000000	0.0000000000	0.0000000000
+			0.0000000000	1.0000000000	0.0000000000
+			0.0000000000	0.0000000000	1.0000000000
+		com		0.0000000000		0.0000000000		0.0000000000
+	endsegment
+
+	// Markers
+	marker	ISCHIO1D
+		parent	CuisseD
+		position	-0.0430605799	-0.0863732190	-0.1385295043
+		technical 1
+	endmarker
+	marker	TFLD
+		parent	CuisseD
+		position	0.0487773694	-0.0348256363	-0.2009561566
+		technical 1
+	endmarker
+	marker	ISCHIO2D
+		parent	CuisseD
+		position	-0.0472948841	-0.0831793372	-0.2178078183
+		technical 1
+	endmarker
+	marker	CONDEXTD
+		parent	CuisseD
+		position	0.0164407088	0.0144052670	-0.3394387491
+		technical 1
+	endmarker
+	marker	CONDINTD
+		parent	CuisseD
+		position	-0.1075327258	0.0144052670	-0.3267628713
+		technical 1
+	endmarker
+
+
+// Informations about JambeD segment
+	// Segment
+	segment	JambeD
+		parent	CuisseD
+		RT
+			0.9401383725	0.0633496700	0.3348531917	0.0000152512
+			-0.0283310023	0.9936979413	-0.1084516293	-0.0000030685
+			-0.3396133022	0.0924728117	0.9360083248	-0.3613695574
+			0.0000000000	0.0000000000	0.0000000000	1.0000000000
+		rotations	x
+		mass	1.00000
+		inertia
+			1.0000000000	0.0000000000	0.0000000000
+			0.0000000000	1.0000000000	0.0000000000
+			0.0000000000	0.0000000000	1.0000000000
+		com		0.0000000000		0.0000000000		0.0000000000
+	endsegment
+
+	// Markers
+	marker	CRETED
+		parent	JambeD
+		position	-0.0294696879	0.0332184635	-0.1726213784
+		technical 1
+	endmarker
+	marker	JAMBLATD
+		parent	JambeD
+		position	0.0469341788	-0.0073938980	-0.1194886783
+		technical 1
+	endmarker
+	marker	TUBD
+		parent	JambeD
+		position	-0.0242877633	0.0475702721	-0.0556278085
+		technical 1
+	endmarker
+	marker	ACHILED
+		parent	JambeD
+		position	0.0016610810	-0.0607909797	-0.2887410517
+		technical 1
+	endmarker
+	marker	MALEXTD
+		parent	JambeD
+		position	0.0368001461	0.0009443348	-0.3402239684
+		technical 1
+	endmarker
+	marker	MALINTD
+		parent	JambeD
+		position	-0.0446467611	0.0009443348	-0.3490498446
+		technical 1
+	endmarker
+
+
+// Informations about PiedD segment
+	// Segment
+	segment	PiedD
+		parent	JambeD
+		RT
+			0.9894861618	0.0384990734	-0.1394093143	0.0000048877
+			-0.1428489716	0.1094506868	-0.9836740916	-0.0000014921
+			-0.0226120958	0.9932463786	0.1137994930	-0.3652860597
+			0.0000000000	0.0000000000	0.0000000000	1.0000000000
+		rotations	xz
+		mass	1.00000
+		inertia
+			1.0000000000	0.0000000000	0.0000000000
+			0.0000000000	1.0000000000	0.0000000000
+			0.0000000000	0.0000000000	1.0000000000
+		com		0.0000000000		0.0000000000		0.0000000000
+	endsegment
+
+	// Markers
+	marker	CALCD
+		parent	PiedD
+		position	0.0254033951	-0.0280072063	0.0495738746
+		technical 1
+	endmarker
+	marker	MIDMETA4D
+		parent	PiedD
+		position	0.0248382816	0.0087328731	-0.0753814697
+		technical 1
+	endmarker
+	marker	MIDMETA1D
+		parent	PiedD
+		position	-0.0437841517	0.0015823130	-0.0755595971
+		technical 1
+	endmarker
+	marker	SCAPHOIDED
+		parent	PiedD
+		position	-0.0135895007	0.0307625535	-0.0589126193
+		technical 1
+	endmarker
+	marker	METAT5D
+		parent	PiedD
+		position	0.0469196283	0.0000000000	-0.1059600338
+		technical 1
+	endmarker
+	marker	METAT1D
+		parent	PiedD
+		position	-0.0469196283	0.0000000000	-0.1220510997
+		technical 1
+	endmarker
+
+
+// Informations about CuisseG segment
+	// Segment
+	segment	CuisseG
+		parent	Pelvis
+		RT
+			0.9655245814	0.0064939202	0.2602308817	-0.1009874211
+			-0.0210546192	0.9983616464	0.0532045675	0.0290780961
+			-0.2594590253	-0.0568493799	0.9640794377	-0.1018191597
+			0.0000000000	0.0000000000	0.0000000000	1.0000000000
+		rotations	xyz
+		mass	1.00000
+		inertia
+			1.0000000000	0.0000000000	0.0000000000
+			0.0000000000	1.0000000000	0.0000000000
+			0.0000000000	0.0000000000	1.0000000000
+		com		0.0000000000		0.0000000000		0.0000000000
+	endsegment
+
+	// Markers
+	marker	ISCHIO1G
+		parent	CuisseG
+		position	0.0241357276	-0.0850460537	-0.1389327082
+		technical 1
+	endmarker
+	marker	TFLG
+		parent	CuisseG
+		position	-0.0625530548	-0.0192155759	-0.1789133517
+		technical 1
+	endmarker
+	marker	ISCHIO2G
+		parent	CuisseG
+		position	0.0342424755	-0.0799564609	-0.2136086910
+		technical 1
+	endmarker
+	marker	CONEXTG
+		parent	CuisseG
+		position	-0.0249586913	0.0173785742	-0.3310176803
+		technical 1
+	endmarker
+	marker	CONDINTG
+		parent	CuisseG
+		position	0.1011342657	0.0173785742	-0.3209117160
+		technical 1
+	endmarker
+
+
+// Informations about JambeG segment
+	// Segment
+	segment	JambeG
+		parent	CuisseG
+		RT
+			0.9575307663	-0.1978323883	-0.2097550428	0.0000008895
+			0.1408713420	0.9557307591	-0.2583292107	0.0000009398
+			0.2515752310	0.2178096927	0.9430105200	-0.3605936337
+			0.0000000000	0.0000000000	0.0000000000	1.0000000000
+		rotations	x
+		mass	1.00000
+		inertia
+			1.0000000000	0.0000000000	0.0000000000
+			0.0000000000	1.0000000000	0.0000000000
+			0.0000000000	0.0000000000	1.0000000000
+		com		0.0000000000		0.0000000000		0.0000000000
+	endsegment
+
+	// Markers
+	marker	CRETEG
+		parent	JambeG
+		position	0.0260061723	0.0276059025	-0.1719679770
+		technical 1
+	endmarker
+	marker	JAMBLATG
+		parent	JambeG
+		position	-0.0477142186	-0.0012551312	-0.1268977550
+		technical 1
+	endmarker
+	marker	TUBG
+		parent	JambeG
+		position	0.0329482611	0.0409120405	-0.0649751304
+		technical 1
+	endmarker
+	marker	ACHILLEG
+		parent	JambeG
+		position	-0.0095009062	-0.0699197950	-0.2601654332
+		technical 1
+	endmarker
+	marker	MALEXTG
+		parent	JambeG
+		position	-0.0360196706	-0.0097952821	-0.3386607116
+		technical 1
+	endmarker
+	marker	MALINTG
+		parent	JambeG
+		position	0.0456472425	-0.0097952821	-0.3396557897
+		technical 1
+	endmarker
+
+
+// Informations about PiedG segment
+	// Segment
+	segment	PiedG
+		parent	JambeG
+		RT
+			0.9857370121	-0.1184980517	0.1195021125	-0.0000385888
+			0.1470399655	0.2610095614	-0.9540719351	0.0001417753
+			0.0818644714	0.9580356050	0.2747107346	-0.3521264294
+			0.0000000000	0.0000000000	0.0000000000	1.0000000000
+		rotations	xz
+		mass	1.00000
+		inertia
+			1.0000000000	0.0000000000	0.0000000000
+			0.0000000000	1.0000000000	0.0000000000
+			0.0000000000	0.0000000000	1.0000000000
+		com		0.0000000000		0.0000000000		0.0000000000
+	endsegment
+
+	// Markers
+	marker	CALCG
+		parent	PiedG
+		position	-0.0287623600	-0.0401323493	0.0570282373
+		technical 1
+	endmarker
+	marker	MIDMETA4G
+		parent	PiedG
+		position	-0.0252494126	0.0061766839	-0.0713369752
+		technical 1
+	endmarker
+	marker	MIDMETA1G
+		parent	PiedG
+		position	0.0443572046	-0.0065159690	-0.0702614227
+		technical 1
+	endmarker
+	marker	SCAPHOIDEG
+		parent	PiedG
+		position	0.0093760024	0.0266594901	-0.0463849087
+		technical 1
+	endmarker
+	marker	METAT5G
+		parent	PiedG
+		position	-0.0465342877	0.0000000000	-0.1003520007
+		technical 1
+	endmarker
+	marker	METAT1G
+		parent	PiedG
+		position	0.0465342877	0.0000000000	-0.1126042619
+		technical 1
+	endmarker
+
+
