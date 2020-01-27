@@ -1135,7 +1135,9 @@ class BiorbdModel:
                         'model.umin = -50*ones(model.nu,1);\n'
                         'model.umax =  50*ones(model.nu,1);\n'
                         '\n'
-                        '% model.gravity = [0 0 0];\n'
+                        'if isfield(data, \'gravity\')\n'
+                        	'\tmodel.gravity = data.gravity;\n'
+			'end;\n'
                         )
         self.file.write('end\n')
         self.file.close()
