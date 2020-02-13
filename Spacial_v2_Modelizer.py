@@ -987,8 +987,6 @@ class BiorbdModel:
                 number_line += 1
                 continue
 
-    # TODO complete this section
-    # Up to: appearance
     def write(self, write_path=None):
         if not write_path:
             if self.write_path:
@@ -1015,7 +1013,6 @@ class BiorbdModel:
         self.file.write('\n')
         self.file.write('import casadi.*' + '\n')
         self.file.write('\n')
-        # To modify
         self.file.write('model.name = \'' + os.path.splitext(self.path)[0] + '\';\n'
                         '\n'
                         'model.NB = ' + model['NB'] + ';\n'
@@ -1059,34 +1056,34 @@ class BiorbdModel:
                         '\n'
                         'qmin_base = [-inf,-inf,-inf,-inf,-pi/4,-inf];\n'
                         'qmax_base = [ inf, inf, inf, inf, pi/4, inf];\n'
-                        'qmin_thorax = [-pi/2,-pi/2,-pi/2];\n'
-                        'qmax_thorax = [ pi/2, pi/2, pi/2];\n'
-                        'qmin_tete = [-pi/2,-pi/2,-pi/2];\n'
-                        'qmax_tete = [ pi/2, pi/2, pi/2];\n'
+                        'qmin_thorax = [-pi/2,-pi/2.1,-pi/2];\n'
+                        'qmax_thorax = [ pi/2, pi/2.1, pi/2];\n'
+                        'qmin_tete = [-pi/2,-pi/2.1,-pi/2];\n'
+                        'qmax_tete = [ pi/2, pi/2.1, pi/2];\n'
                         'qmin_epaule_droite = [-pi/2,-pi/2];\n'
                         'qmax_epaule_droite = [ pi/2, pi/2];\n'
-                        'qmin_bras_droit = [-pi,-pi/2,-pi];\n'
-                        'qmax_bras_droit = [ pi, pi/2, pi];\n'
+                        'qmin_bras_droit = [-pi,-pi/2.1,-pi];\n'
+                        'qmax_bras_droit = [ pi, pi/2.1, pi];\n'
                         'qmin_avantbras_droit = [ 0,-pi/2];\n'
                         'qmax_avantbras_droit = [pi, pi/2];\n'
                         'qmin_main_droite = [-pi/2,-pi/2];\n'
                         'qmax_main_droite = [ pi/2, pi/2];\n'
                         'qmin_epaule_gauche = [-pi/2,-pi/2];\n'
                         'qmax_epaule_gauche = [ pi/2, pi/2];\n'
-                        'qmin_bras_gauche = [-pi,-pi/2,-pi];\n'
-                        'qmax_bras_gauche = [ pi, pi/2, pi];\n'
+                        'qmin_bras_gauche = [-pi,-pi/2.1,-pi];\n'
+                        'qmax_bras_gauche = [ pi, pi/2.1, pi];\n'
                         'qmin_avantbras_gauche = [ 0,-pi/2];\n'
                         'qmax_avantbras_gauche = [pi, pi/2];\n'
                         'qmin_main_gauche = [-pi/2,-pi/2];\n'
                         'qmax_main_gauche = [ pi/2, pi/2];\n'
-                        'qmin_cuisse_droite = [-pi,-pi/2,-pi/2];\n'
-                        'qmax_cuisse_droite = [ pi, pi/2, pi/2];\n'
+                        'qmin_cuisse_droite = [-pi,-pi/2.1,-pi/2];\n'
+                        'qmax_cuisse_droite = [ pi, pi/2.1, pi/2];\n'
                         'qmin_jambe_droite = [-pi];\n'
                         'qmax_jambe_droite = [  0];\n'
                         'qmin_pied_droit = [-pi/2,-pi/2];\n'
                         'qmax_pied_droit = [ pi/2, pi/2];\n'
-                        'qmin_cuisse_gauche = [-pi,-pi/2,-pi/2];\n'
-                        'qmax_cuisse_gauche = [ pi, pi/2, pi/2];\n'
+                        'qmin_cuisse_gauche = [-pi,-pi/2.1,-pi/2];\n'
+                        'qmax_cuisse_gauche = [ pi, pi/2.1, pi/2];\n'
                         'qmin_jambe_gauche = [-pi];\n'
                         'qmax_jambe_gauche = [  0];\n'
                         'qmin_pied_gauche = [-pi/2,-pi/2];\n'
@@ -1112,7 +1109,7 @@ class BiorbdModel:
                                       '\tqmin_cuisse_gauche\'; ...\n'
                                       '\tqmin_jambe_gauche\'; ...\n'
                                       '\tqmin_pied_gauche\'; ...\n'
-                                      '\tqdotmin_base\'; -100*ones(model.nq-6,1)]; % qdot\n'
+                                      '\tqdotmin_base\'; -200*ones(model.nq-6,1)]; % qdot\n'
                         'model.xmax = [qmax_base\';  ... % q\n'
                                       '\tqmax_thorax\'; ...\n'
                                       '\tqmax_tete\'; ...\n'
@@ -1130,10 +1127,10 @@ class BiorbdModel:
                                       '\tqmax_cuisse_gauche\'; ...\n'
                                       '\tqmax_jambe_gauche\'; ...\n'
                                       '\tqmax_pied_gauche\'; ...\n'
-                                      '\tqdotmax_base\';  100*ones(model.nq-6,1)]; % qdot\n'
+                                      '\tqdotmax_base\';  200*ones(model.nq-6,1)]; % qdot\n'
                         '\n'
-                        'model.umin = -50*ones(model.nu,1);\n'
-                        'model.umax =  50*ones(model.nu,1);\n'
+                        'model.umin = -150*ones(model.nu,1);\n'
+                        'model.umax =  150*ones(model.nu,1);\n'
                         '\n'
                         'if isfield(data, \'gravity\')\n'
                         	'\tmodel.gravity = data.gravity;\n'
